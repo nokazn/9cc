@@ -30,6 +30,11 @@ int main(int argc, char **argv)
       printf("  sub rax, %ld\n", strtol(p, &p, 10));
       continue;
     }
+    if (*p == ' ')
+    {
+      p++;
+      continue;
+    }
     fprintf(stderr, "予期しない文字です: '%c'\n", *p);
     return 1;
   }
