@@ -5,6 +5,7 @@ CFLAGS=-std=c11 -g -static
 .DEFAULT_GOAL := help
 
 9cc: 9cc.c
+	cc -o 9cc ./9cc.c
 
 .PHONY: test
 test: 9cc # テストコードを実行
